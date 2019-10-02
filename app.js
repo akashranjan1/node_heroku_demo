@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const router = express.Router();
 const port = process.env.PORT || 8080;
+const { mongoose } = require('./db-connection/mongoose-connection');
 
 const app = express();
 
