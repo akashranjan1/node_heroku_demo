@@ -7,9 +7,20 @@ const UserDetailsSchema = new Schema({
         type: String,
         trim: true
     },
-    firstName : {
+    firstname : {
         type: String,
         trim : true
+    },
+    lastname : {
+        type: String,
+        trim : true
+    },
+    phone : {
+        type: String,
+        trim : true
+    },
+    dob : {
+        type: Date
     }
 });
 

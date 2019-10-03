@@ -3,8 +3,11 @@ const { UserDetailsModel } = require('./../model/details-model');
 exports.ENTER_USER_DETAILS = async (req, res) => {
     try {
         let userDetails = new UserDetailsModel({
-            username : req.body.username,
-            firstName : req.body.firstName
+            email : req.body.email,
+            firstname : req.body.firstname,
+            lastname : req.body.lastname,
+            phone : req.body.phone,
+            dob:req.body.dob
         })
         let userDetailsDoc = await userDetails.save();
         if(!userDetailsDoc) {throw new Error('Could not be saved')}
